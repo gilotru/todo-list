@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600;1,700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(223, 124, 223);
+}
+.wrapper{
+    max-width: 405px;
+    margin: 135px;
+    border-radius: 6px;
+    background: white;
+    padding: 28px 0;
+}
+.doinput{
+    height: 52px;
+    padding: 0 25px;
+    position: relative;
+}
+.doinput i{
+    position: absolute;
+    top: 50%;
+    transform: translate(17px, -12px);
+}
+.doinput input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 0 20px 0 53px;
+    cursor: pointer;
+}
+.controls input::placeholder{
+    color: aliceblue;
+}
+.controls{
+    padding: 18px 25px;
+    border-bottom: 1px solid gray;
+}
+.controls, .list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.filters span{
+    cursor: pointer;
+    margin: 0 5px;
+}
+.controls .btn-control{
+    color: white;
+    width:80px;
+    background: rgb(80, 80, 247);
+    border-radius: 2px;
+    border: 1px solid rgb(80, 80, 247);
+    cursor: pointer;
+}
+.task-bar{
+    margin: 20px 25px;
+}
+.task-bar .list{
+    list-style: none;
+    border-bottom: 1px solid rgb(182, 182, 182);
+}
+.list label{
+    display: flex;
+}
+.list label p{
+    max-width: 200px;
+}
+.list label p.checked{
+    text-decoration: line-through;
+}
+.list .settings {
+    cursor: pointer;
+}
+.settings .task-menu{
+    list-style: none;
+    position: absolute;
+    padding: 5px 0;
+    z-index: 2;
+    transform: scale(0);
+    border-radius: 4px;
+    background: white;
+    transform-origin: top right;
+    transition: all 0,3s ease;
+    box-shadow: 0 0 6px gray;
+}
+.settings .task-menu.show{
+    transform: scale(1);
+}
+.task-menu li{
+    align-items: center;
+    height: 25px;
+    font-size: 15px;
+    padding: 17px 15px;
+    margin-bottom: 2px;
+    justify-content: flex-start;
+}
+.task-menu li:hover{
+    background: rgb(231, 230, 230);
+}
+.task-menu li i{
+    padding-right: 10px;
+}
